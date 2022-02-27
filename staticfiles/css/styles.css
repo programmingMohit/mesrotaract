@@ -2,3 +2,20 @@
     border-radius: 50%;
     width: 80px;
 }
+
+.main {
+    background-color: #630b07;
+}
+
+.navbar{
+    background-color: black;
+}
+
+.card {
+    background-color: #F8F0E3;
+    color: black;
+}
+
+h3{
+    font-weight: bold;
+}
