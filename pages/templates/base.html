@@ -1,172 +1,153 @@
 {% load static %}
 
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+    <title>MES</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="description" content="MES" />
+    <meta property="og:site_name" content="MES" />
+    <meta property="og:title" content="MES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="MES" />
+    <meta property="og:image" content="https://mesrac-3190.carrd.co/assets/images/card.jpg?v=1669fdf0" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:url" content="https://mesrac-3190.carrd.co" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://mesrac-3190.carrd.co" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,300italic,400,400italic" rel="stylesheet"
+        type="text/css" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <noscript>
+        <style>
+            body {
+                overflow: auto !important;
+            }
 
-    <title>MES Rotaract Club</title>
+            #main {
+                opacity: 1.0 !important;
+                transform: none !important;
+                transition: none !important;
+                filter: none !important;
+            }
+
+            #main>.inner>section {
+                opacity: 1.0 !important;
+                transform: none !important;
+                transition: none !important;
+                filter: none !important;
+            }
+        </style>
+    </noscript>
 </head>
 
-<body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <!--logo-->
-                <div class="navbar-brand logo">
-                    <img src="{% static 'images/logo.jpg' %}" class="logo-img ms-5">
-                    <span class="club-name fw-bold d-none d-lg-block">MES ROTARACT CLUB</span>
+<body class="is-loading">
+    <!--Social media links icons-->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40"
+        display="none" width="0" height="0">
+        <symbol id="icon-9fe" viewBox="0 0 40 40">
+            <polygon points="3.6,10.5 3.6,29.5 20,39 36.4,29.5 36.4,10.5 20,1" vector-effect="non-scaling-stroke" />
+        </symbol>
+        <symbol id="icon-90a" viewBox="0 0 40 40">
+            <path
+                d="M37.3,15.3v15.3c0,0.8-0.3,1.6-0.9,2.2c-0.6,0.6-1.4,0.9-2.2,0.9H5.8c-0.8,0-1.6-0.3-2.2-0.9s-0.9-1.4-0.9-2.2V15.3 c0.5,0.6,1.2,1.1,2,1.7c4.7,3.1,7.9,5.4,9.6,6.7c0.7,0.5,1.4,0.9,1.8,1.2c0.4,0.3,1,0.6,1.9,0.9c0.7,0.3,1.5,0.5,2.1,0.5l0,0 c0.6,0,1.4-0.2,2.1-0.5c0.7-0.3,1.4-0.6,1.9-0.9c0.4-0.3,1-0.7,1.8-1.2c2.2-1.6,5.4-3.8,9.6-6.7C36.1,16.5,36.7,15.9,37.3,15.3 L37.3,15.3z M37.3,9.6c0,1-0.3,2-0.9,2.9c-0.6,0.9-1.5,1.8-2.4,2.4c-4.9,3.3-7.9,5.4-9,6.2c-0.1,0.1-0.4,0.3-0.8,0.6 c-0.4,0.3-0.7,0.5-1,0.7c-0.3,0.2-0.6,0.4-1,0.6c-0.4,0.2-0.7,0.4-1.1,0.5c-0.4,0.1-0.6,0.2-0.9,0.2l0,0c-0.3,0-0.6-0.1-0.9-0.2 c-0.3-0.1-0.7-0.3-1.1-0.5c-0.4-0.2-0.7-0.4-1-0.6c-0.3-0.2-0.6-0.4-1-0.7c-0.4-0.3-0.7-0.5-0.8-0.6c-1.1-0.8-2.8-2-5.1-3.5 c-2.3-1.6-3.3-2.4-3.7-2.7c-0.8-0.5-1.6-1.2-2.3-2.2s-1-1.9-1-2.6c0-1,0.3-1.9,0.8-2.5c0.5-0.6,1.2-1,2.3-1h28.4 c0.8,0,1.6,0.3,2.2,0.9C37.1,8.1,37.3,8.8,37.3,9.6L37.3,9.6z" />
+        </symbol>
+        <symbol id="icon-93f" viewBox="0 0 40 40">
+            <path
+                d="M33.2,8.3c-2.5-1.1-5.1-1.9-7.9-2.4c-0.3,0.6-0.7,1.4-1,2c-2.9-0.4-5.8-0.4-8.7,0c-0.3-0.6-0.7-1.4-1-2 c-2.8,0.5-5.4,1.3-7.9,2.4c-5,7.2-6.3,14.2-5.6,21.1c3.3,2.3,6.5,3.8,9.6,4.7c0.8-1,1.5-2.1,2.1-3.3c-1.1-0.4-2.2-0.9-3.2-1.5 c0.3-0.2,0.5-0.4,0.8-0.6c6.3,2.8,13,2.8,19.2,0c0.3,0.2,0.5,0.4,0.8,0.6c-1,0.6-2.1,1.1-3.2,1.5c0.6,1.1,1.3,2.2,2.1,3.3 c3.1-0.9,6.3-2.4,9.6-4.7C39.7,21.4,37.5,14.4,33.2,8.3z M13.7,25.1c-1.9,0-3.4-1.7-3.4-3.7s1.5-3.7,3.4-3.7c1.9,0,3.5,1.7,3.4,3.7 C17.1,23.4,15.6,25.1,13.7,25.1z M26.3,25.1c-1.9,0-3.4-1.7-3.4-3.7s1.5-3.7,3.4-3.7c1.9,0,3.5,1.7,3.4,3.7 C29.7,23.4,28.2,25.1,26.3,25.1z" />
+        </symbol>
+        <symbol id="icon-906" viewBox="0 0 40 40">
+            <path
+                d="M27.2,4.7v4.9h-2.9c-1.1,0-1.8,0.2-2.1,0.6c-0.4,0.5-0.6,1.1-0.6,2v3.5H27l-0.7,5.4h-4.7v14H16v-14h-4.7v-5.4H16v-4.1 c0-2.3,0.6-4.1,1.9-5.3s2.9-1.9,5.2-1.9C24.8,4.4,26.2,4.5,27.2,4.7L27.2,4.7z" />
+        </symbol>
+        <symbol id="icon-910" viewBox="0 0 40 40">
+            <path
+                d="M20,7c4.2,0,4.7,0,6.3,0.1c1.5,0.1,2.3,0.3,3,0.5C30,8,30.5,8.3,31.1,8.9c0.5,0.5,0.9,1.1,1.2,1.8c0.2,0.5,0.5,1.4,0.5,3 C33,15.3,33,15.8,33,20s0,4.7-0.1,6.3c-0.1,1.5-0.3,2.3-0.5,3c-0.3,0.7-0.6,1.2-1.2,1.8c-0.5,0.5-1.1,0.9-1.8,1.2 c-0.5,0.2-1.4,0.5-3,0.5C24.7,33,24.2,33,20,33s-4.7,0-6.3-0.1c-1.5-0.1-2.3-0.3-3-0.5C10,32,9.5,31.7,8.9,31.1 C8.4,30.6,8,30,7.7,29.3c-0.2-0.5-0.5-1.4-0.5-3C7,24.7,7,24.2,7,20s0-4.7,0.1-6.3c0.1-1.5,0.3-2.3,0.5-3C8,10,8.3,9.5,8.9,8.9 C9.4,8.4,10,8,10.7,7.7c0.5-0.2,1.4-0.5,3-0.5C15.3,7.1,15.8,7,20,7z M20,4.3c-4.3,0-4.8,0-6.5,0.1c-1.6,0-2.8,0.3-3.8,0.7 C8.7,5.5,7.8,6,6.9,6.9C6,7.8,5.5,8.7,5.1,9.7c-0.4,1-0.6,2.1-0.7,3.8c-0.1,1.7-0.1,2.2-0.1,6.5s0,4.8,0.1,6.5 c0,1.6,0.3,2.8,0.7,3.8c0.4,1,0.9,1.9,1.8,2.8c0.9,0.9,1.7,1.4,2.8,1.8c1,0.4,2.1,0.6,3.8,0.7c1.6,0.1,2.2,0.1,6.5,0.1 s4.8,0,6.5-0.1c1.6-0.1,2.9-0.3,3.8-0.7c1-0.4,1.9-0.9,2.8-1.8c0.9-0.9,1.4-1.7,1.8-2.8c0.4-1,0.6-2.1,0.7-3.8 c0.1-1.6,0.1-2.2,0.1-6.5s0-4.8-0.1-6.5c-0.1-1.6-0.3-2.9-0.7-3.8c-0.4-1-0.9-1.9-1.8-2.8c-0.9-0.9-1.7-1.4-2.8-1.8 c-1-0.4-2.1-0.6-3.8-0.7C24.8,4.3,24.3,4.3,20,4.3L20,4.3L20,4.3z" />
+            <path
+                d="M20,11.9c-4.5,0-8.1,3.7-8.1,8.1s3.7,8.1,8.1,8.1s8.1-3.7,8.1-8.1S24.5,11.9,20,11.9z M20,25.2c-2.9,0-5.2-2.3-5.2-5.2 s2.3-5.2,5.2-5.2s5.2,2.3,5.2,5.2S22.9,25.2,20,25.2z" />
+            <path
+                d="M30.6,11.6c0,1-0.8,1.9-1.9,1.9c-1,0-1.9-0.8-1.9-1.9s0.8-1.9,1.9-1.9C29.8,9.7,30.6,10.5,30.6,11.6z" />
+        </symbol>
+        <symbol id="icon-905" viewBox="0 0 40 40">
+            <path
+                d="M36.3,10.2c-1,1.3-2.1,2.5-3.4,3.5c0,0.2,0,0.4,0,1c0,1.7-0.2,3.6-0.9,5.3c-0.6,1.7-1.2,3.5-2.4,5.1 c-1.1,1.5-2.3,3.1-3.7,4.3c-1.4,1.2-3.3,2.3-5.3,3c-2.1,0.8-4.2,1.2-6.6,1.2c-3.6,0-7-1-10.2-3c0.4,0,1.1,0.1,1.5,0.1 c3.1,0,5.9-1,8.2-2.9c-1.4,0-2.7-0.4-3.8-1.3c-1.2-1-1.9-2-2.2-3.3c0.4,0.1,1,0.1,1.2,0.1c0.6,0,1.2-0.1,1.7-0.2 c-1.4-0.3-2.7-1.1-3.7-2.3s-1.4-2.6-1.4-4.2v-0.1c1,0.6,2,0.9,3,0.9c-1-0.6-1.5-1.3-2.2-2.4c-0.6-1-0.9-2.1-0.9-3.3s0.3-2.3,1-3.4 c1.5,2.1,3.6,3.6,6,4.9s4.9,2,7.6,2.1c-0.1-0.6-0.1-1.1-0.1-1.4c0-1.8,0.8-3.5,2-4.7c1.2-1.2,2.9-2,4.7-2c2,0,3.6,0.8,4.8,2.1 c1.4-0.3,2.9-0.9,4.2-1.5c-0.4,1.5-1.4,2.7-2.9,3.6C33.8,11.2,35.1,10.9,36.3,10.2L36.3,10.2z" />
+        </symbol>
+        <symbol id="icon-90d" viewBox="0 0 40 40">
+            <path
+                d="M24.3,27v4.2c0,0.9-0.3,1.3-0.8,1.3c-0.3,0-0.6-0.1-0.9-0.4v-6c0.3-0.3,0.6-0.4,0.9-0.4C24,25.6,24.3,26.1,24.3,27L24.3,27z M31.1,27v0.9h-1.8V27c0-0.9,0.3-1.4,0.9-1.4C30.8,25.6,31.1,26.1,31.1,27L31.1,27z M11.7,22.6h2.1v-1.9H7.6v1.9h2.1v11.4h2 L11.7,22.6L11.7,22.6z M17.5,34.1h1.8v-9.9h-1.8v7.6c-0.4,0.6-0.8,0.8-1.1,0.8c-0.2,0-0.4-0.1-0.4-0.4c0,0,0-0.3,0-0.7v-7.3h-1.8V32 c0,0.7,0.1,1.1,0.2,1.5c0.2,0.5,0.5,0.7,1.2,0.7c0.6,0,1.3-0.4,2-1.2L17.5,34.1L17.5,34.1z M26.1,31.1v-4c0-1-0.1-1.6-0.2-2 c-0.2-0.7-0.7-1.1-1.4-1.1c-0.7,0-1.3,0.4-1.9,1.1v-4.4h-1.8v13.3h1.8v-1c0.6,0.7,1.2,1.1,1.9,1.1c0.7,0,1.2-0.4,1.4-1.1 C26,32.7,26.1,32.1,26.1,31.1L26.1,31.1z M32.9,30.9v-0.3H31c0,0.7,0,1.1,0,1.2c-0.1,0.5-0.4,0.7-0.8,0.7c-0.6,0-0.9-0.5-0.9-1.4 v-1.7h3.6v-2.1c0-1.1-0.2-1.8-0.5-2.3c-0.5-0.7-1.2-1-2.1-1c-0.9,0-1.6,0.3-2.1,1c-0.4,0.5-0.6,1.3-0.6,2.3v3.5 c0,1.1,0.2,1.8,0.6,2.3c0.5,0.7,1.2,1,2.2,1c1,0,1.7-0.4,2.2-1.1c0.2-0.4,0.4-0.7,0.4-1.1C32.9,31.9,32.9,31.5,32.9,30.9L32.9,30.9z M20.7,12.5V8.3c0-0.9-0.3-1.4-0.9-1.4c-0.6,0-0.9,0.5-0.9,1.4v4.2c0,0.9,0.3,1.4,0.9,1.4C20.4,14,20.7,13.5,20.7,12.5z M35.1,27.6 c0,3.1-0.2,5.5-0.5,7c-0.2,0.8-0.6,1.5-1.2,2c-0.6,0.5-1.3,0.8-2,0.9c-2.5,0.3-6.2,0.4-11.1,0.4s-8.7-0.1-11.1-0.4 c-0.8-0.1-1.5-0.4-2.1-0.9c-0.6-0.5-1-1.2-1.2-2c-0.3-1.5-0.5-3.8-0.5-7c0-3.1,0.2-5.5,0.5-7c0.2-0.8,0.6-1.5,1.2-2 c0.6-0.5,1.3-0.9,2.1-0.9c2.5-0.3,6.2-0.4,11.1-0.4s8.7,0.1,11.1,0.4c0.8,0.1,1.5,0.4,2.1,0.9c0.6,0.5,1,1.2,1.2,2 C34.9,22.1,35.1,24.4,35.1,27.6z M15.1,2h2l-2.4,8v5.4h-2V10c-0.2-1-0.6-2.4-1.2-4.3c-0.5-1.4-0.9-2.6-1.3-3.8h2.1l1.4,5.3L15.1,2z M22.5,8.7v3.5c0,1.1-0.2,1.9-0.6,2.4c-0.5,0.7-1.2,1-2.1,1c-0.9,0-1.6-0.3-2.1-1c-0.4-0.5-0.6-1.3-0.6-2.4V8.7 c0-1.1,0.2-1.9,0.6-2.3c0.5-0.7,1.2-1,2.1-1c0.9,0,1.6,0.3,2.1,1C22.3,6.8,22.5,7.6,22.5,8.7z M29.2,5.4v10h-1.8v-1.1 c-0.7,0.8-1.4,1.2-2.1,1.2c-0.6,0-1-0.2-1.2-0.7C24,14.5,24,14,24,13.4V5.4h1.8v7.4c0,0.4,0,0.7,0,0.7c0,0.3,0.2,0.4,0.4,0.4 c0.4,0,0.7-0.3,1.1-0.9V5.4C27.4,5.4,29.2,5.4,29.2,5.4z" />
+        </symbol>
+    </svg>
+    <!--End of Social media links icons-->
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <div id="container01" class="style2 container default full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <div id="image02" class="image" data-position="center"><span class="frame"><img
+                                        src="{% static 'images/logo-band.png' %}" alt="" /></span></div>
+                        </div>
+                    </div>
                 </div>
-                <!--button toggle for mobile-->
-                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <!--navigation links-->
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active m-3" aria-current="page" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle m-3" id="navbarAbout" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarAbout">
-                                <li><a class="dropdown-item" href="#">Avenues Of Service</a></li>
-                                <li><a class="dropdown-item" href="{% url 'bod' %}">Board Of Directors</a></li>
+                <div id="container02" class="style1 container default full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <h1 id="text02" class="style1">MES Rotaract Club</h1>
+                        </div>
+                    </div>
+                </div>
+                {% block content %}
+                {% endblock content %}
+                <hr id="divider01" class="style1 full screen">
+                <div id="container04" class="style1 container default full screen">
+                    <div class="wrapper">
+                        <div class="inner">
+                            <ul id="icons01" class="style1 icons">
+                                <li><a class="n01" href="https://instagram.com/mesrotaract?igshid=o6nwtqjoup96"><svg>
+                                            <use xlink:href="#icon-910"></use>
+                                        </svg><span class="label">Instagram</span></a><svg>
+                                        <use xlink:href="#icon-9fe"></use>
+                                    </svg></li>
+                                <li><a class="n02" href="https://twitter.com/MesRotaract?s=09"><svg>
+                                            <use xlink:href="#icon-905"></use>
+                                        </svg><span class="label">Twitter</span></a><svg>
+                                        <use xlink:href="#icon-9fe"></use>
+                                    </svg></li>
+                                <li><a class="n03" href="https://www.facebook.com/mes.r.club"><svg>
+                                            <use xlink:href="#icon-906"></use>
+                                        </svg><span class="label">Facebook</span></a><svg>
+                                        <use xlink:href="#icon-9fe"></use>
+                                    </svg></li>
+                                <li><a class="n04" href="https://discord.gg/gbGv9J8p"><svg>
+                                            <use xlink:href="#icon-93f"></use>
+                                        </svg><span class="label">Discord</span></a><svg>
+                                        <use xlink:href="#icon-9fe"></use>
+                                    </svg></li>
+                                <li><a class="n05" href="https://www.youtube.com/channel/UCR2cynjAUJ0ie9Elvqxxyxg"><svg>
+                                            <use xlink:href="#icon-90d"></use>
+                                        </svg><span class="label">YouTube</span></a><svg>
+                                        <use xlink:href="#icon-9fe"></use>
+                                    </svg></li>
+                                <li><a class="n06" href="https://domain.ext/path"><svg>
+                                            <use xlink:href="#icon-90a"></use>
+                                        </svg><span class="label">Email</span></a><svg>
+                                        <use xlink:href="#icon-9fe"></use>
+                                    </svg></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link m-3" href="#">Bylaws</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav-link m-3">
-                                <i class="fab fa-facebook-f" style="color:white"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="nav-link m-3">
-                                <i class="fab fa-twitter" style="color:white"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/mesrotaract/" class="nav-link m-3">
-                                <i class="fab fa-instagram" style="color:white"></i>
-                            </a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
+                <hr id="divider02" class="style1 full screen">
             </div>
-        </nav>
-    </header>
-
-    <main class="main">
-        {% block content %}
-        {% endblock content %}
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light text-muted">
-        <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/mesrotaract/" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-5 col-lg-5 col-xl-6 mx-auto mb-4">
-                        <!-- Content -->
-                        <img src="{% static 'images/logo.jpg' %}" alt="MES Rotaract Club logo" class="logo-img mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            MES Rotaract Club
-                        </h6>
-                        <p>
-                            MES Rotaract Club is a community based club of youngsters (18 to 30 years of
-                            age).We organize and participate in projects with an aim to create a change in the society.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Menu
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Home</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">About</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Bylaws</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                        </h6>
-                        <p><i class="fas fa-home me-3"></i>Malleshwaram, Bangalore</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@example.com
-                        </p>
-                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-    </footer>
-    <!-- Footer -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+        </div>
+    </div>
+    <script>
+        (function () { var on = addEventListener, $ = function (q) { return document.querySelector(q) }, $$ = function (q) { return document.querySelectorAll(q) }, $body = document.body, $inner = $('.inner'), client = (function () { var o = { browser: 'other', browserVersion: 0, os: 'other', osVersion: 0, mobile: false, canUse: null }, ua = navigator.userAgent, a, i; a = [['firefox', /Firefox\/([0-9\.]+)/], ['edge', /Edge\/([0-9\.]+)/], ['safari', /Version\/([0-9\.]+).+Safari/], ['chrome', /Chrome\/([0-9\.]+)/], ['chrome', /CriOS\/([0-9\.]+)/], ['ie', /Trident\/.+rv:([0-9]+)/]]; for (i = 0; i < a.length; i++) { if (ua.match(a[i][1])) { o.browser = a[i][0]; o.browserVersion = parseFloat(RegExp.$1); break; } } a = [['ios', /([0-9_]+) like Mac OS X/, function (v) { return v.replace('_', '.').replace('_', ''); }], ['ios', /CPU like Mac OS X/, function (v) { return 0 }], ['ios', /iPad; CPU/, function (v) { return 0 }], ['android', /Android ([0-9\.]+)/, null], ['mac', /Macintosh.+Mac OS X ([0-9_]+)/, function (v) { return v.replace('_', '.').replace('_', ''); }], ['windows', /Windows NT ([0-9\.]+)/, null], ['undefined', /Undefined/, null],]; for (i = 0; i < a.length; i++) { if (ua.match(a[i][1])) { o.os = a[i][0]; o.osVersion = parseFloat(a[i][2] ? (a[i][2])(RegExp.$1) : RegExp.$1); break; } } if (o.os == 'mac' && ('ontouchstart' in window) && ((screen.width == 1024 && screen.height == 1366) || (screen.width == 834 && screen.height == 1112) || (screen.width == 810 && screen.height == 1080) || (screen.width == 768 && screen.height == 1024))) o.os = 'ios'; o.mobile = (o.os == 'android' || o.os == 'ios'); var _canUse = document.createElement('div'); o.canUse = function (p) { var e = _canUse.style, up = p.charAt(0).toUpperCase() + p.slice(1); return (p in e || ('Moz' + up) in e || ('Webkit' + up) in e || ('O' + up) in e || ('ms' + up) in e); }; return o; }()), trigger = function (t) { if (client.browser == 'ie') { var e = document.createEvent('Event'); e.initEvent(t, false, true); dispatchEvent(e); } else dispatchEvent(new Event(t)); }, cssRules = function (selectorText) { var ss = document.styleSheets, a = [], f = function (s) { var r = s.cssRules, i; for (i = 0; i < r.length; i++) { if (r[i] instanceof CSSMediaRule && matchMedia(r[i].conditionText).matches) (f)(r[i]); else if (r[i] instanceof CSSStyleRule && r[i].selectorText == selectorText) a.push(r[i]); } }, x, i; for (i = 0; i < ss.length; i++)f(ss[i]); return a; }, thisHash = function () { var h = location.hash ? location.hash.substring(1) : null, a; if (!h) return null; if (h.match(/\?/)) { a = h.split('?'); h = a[0]; history.replaceState(undefined, undefined, '#' + h); window.location.search = a[1]; } if (h.length > 0 && !h.match(/^[a-zA-Z]/)) h = 'x' + h; if (typeof h == 'string') h = h.toLowerCase(); return h; }, scrollToElement = function (e, style, duration) { var y, cy, dy, start, easing, offset, f; if (!e) y = 0; else { offset = (e.dataset.scrollOffset ? parseInt(e.dataset.scrollOffset) : 0) * parseFloat(getComputedStyle(document.documentElement).fontSize); switch (e.dataset.scrollBehavior ? e.dataset.scrollBehavior : 'default') { case 'default': default: y = e.offsetTop + offset; break; case 'center': if (e.offsetHeight < window.innerHeight) y = e.offsetTop - ((window.innerHeight - e.offsetHeight) / 2) + offset; else y = e.offsetTop - offset; break; case 'previous': if (e.previousElementSibling) y = e.previousElementSibling.offsetTop + e.previousElementSibling.offsetHeight + offset; else y = e.offsetTop + offset; break; } } if (!style) style = 'smooth'; if (!duration) duration = 750; if (style == 'instant') { window.scrollTo(0, y); return; } start = Date.now(); cy = window.scrollY; dy = y - cy; switch (style) { case 'linear': easing = function (t) { return t }; break; case 'smooth': easing = function (t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 }; break; }f = function () { var t = Date.now() - start; if (t >= duration) window.scroll(0, y); else { window.scroll(0, cy + (dy * easing(t / duration))); requestAnimationFrame(f); } }; f(); }, scrollToTop = function () { scrollToElement(null); }, loadElements = function (parent) { var a, e, x, i; a = parent.querySelectorAll('iframe[data-src]:not([data-src=""])'); for (i = 0; i < a.length; i++) { a[i].src = a[i].dataset.src; a[i].dataset.src = ""; } a = parent.querySelectorAll('video[autoplay]'); for (i = 0; i < a.length; i++) { if (a[i].paused) a[i].play(); } e = parent.querySelector('[data-autofocus="1"]'); x = e ? e.tagName : null; switch (x) { case 'FORM': e = e.querySelector('.field input, .field select, .field textarea'); if (e) e.focus(); break; default: break; } }, unloadElements = function (parent) { var a, e, x, i; a = parent.querySelectorAll('iframe[data-src=""]'); for (i = 0; i < a.length; i++) { if (a[i].dataset.srcUnload === '0') continue; a[i].dataset.src = a[i].src; a[i].src = ''; } a = parent.querySelectorAll('video'); for (i = 0; i < a.length; i++) { if (!a[i].paused) a[i].pause(); } e = $(':focus'); if (e) e.blur(); }; window._scrollToTop = scrollToTop; var thisURL = function () { return window.location.href.replace(window.location.search, '').replace(/#$/, ''); }; var getVar = function (name) { var a = window.location.search.substring(1).split('&'), b, k; for (k in a) { b = a[k].split('='); if (b[0] == name) return b[1]; } return null; }; var errors = { handle: function (handler) { window.onerror = function (message, url, line, column, error) { (handler)(error.message); return true; }; }, unhandle: function () { window.onerror = null; } }; on('load', function () { setTimeout(function () { $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing'); setTimeout(function () { $body.className = $body.className.replace(/\bis-playing\b/, 'is-ready'); }, 2000); }, 100); }); loadElements(document.body); var style, sheet, rule; style = document.createElement('style'); style.appendChild(document.createTextNode('')); document.head.appendChild(style); sheet = style.sheet; if (client.mobile) { (function () { var f = function () { document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px'); document.documentElement.style.setProperty('--background-height', (window.innerHeight + 250) + 'px'); }; on('load', f); on('resize', f); on('orientationchange', function () { setTimeout(function () { (f)(); }, 100); }); })(); } if (client.os == 'android') { (function () { sheet.insertRule('body::after { }', 0); rule = sheet.cssRules[0]; var f = function () { rule.style.cssText = 'height: ' + (Math.max(screen.width, screen.height)) + 'px'; }; on('load', f); on('orientationchange', f); on('touchmove', f); })(); $body.classList.add('is-touch'); } else if (client.os == 'ios') { if (client.osVersion <= 11) (function () { sheet.insertRule('body::after { }', 0); rule = sheet.cssRules[0]; rule.style.cssText = '-webkit-transform: scale(1.0)'; })(); if (client.osVersion <= 11) (function () { sheet.insertRule('body.ios-focus-fix::before { }', 0); rule = sheet.cssRules[0]; rule.style.cssText = 'height: calc(100% + 60px)'; on('focus', function (event) { $body.classList.add('ios-focus-fix'); }, true); on('blur', function (event) { $body.classList.remove('ios-focus-fix'); }, true); })(); $body.classList.add('is-touch'); } else if (client.browser == 'ie') { if (!('matches' in Element.prototype)) Element.prototype.matches = (Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector); (function () { var a = cssRules('body::before'), r; if (a.length > 0) { r = a[0]; if (r.style.width.match('calc')) { r.style.opacity = 0.9999; setTimeout(function () { r.style.opacity = 1; }, 100); } else { document.styleSheets[0].addRule('body::before', 'content: none !important;'); $body.style.backgroundImage = r.style.backgroundImage.replace('url("images/', 'url("assets/images/'); $body.style.backgroundPosition = r.style.backgroundPosition; $body.style.backgroundRepeat = r.style.backgroundRepeat; $body.style.backgroundColor = r.style.backgroundColor; $body.style.backgroundAttachment = 'fixed'; $body.style.backgroundSize = r.style.backgroundSize; } } })(); (function () { var t, f; f = function () { var mh, h, s, xx, x, i; x = $('#wrapper'); x.style.height = 'auto'; if (x.scrollHeight <= innerHeight) x.style.height = '100vh'; xx = $$('.container.full'); for (i = 0; i < xx.length; i++) { x = xx[i]; s = getComputedStyle(x); x.style.minHeight = ''; x.style.height = ''; mh = s.minHeight; x.style.minHeight = 0; x.style.height = ''; h = s.height; if (mh == 0) continue; x.style.height = (h > mh ? 'auto' : mh); } }; (f)(); on('resize', function () { clearTimeout(t); t = setTimeout(f, 250); }); on('load', f); })(); } else if (client.browser == 'edge') { (function () { var xx = $$('.container > .inner > div:last-child'), x, y, i; for (i = 0; i < xx.length; i++) { x = xx[i]; y = getComputedStyle(x.parentNode); if (y.display != 'flex' && y.display != 'inline-flex') continue; x.style.marginLeft = '-1px'; } })(); } if (!client.canUse('object-fit')) { (function () { var xx = $$('.image[data-position]'), x, w, c, i, src; for (i = 0; i < xx.length; i++) { x = xx[i]; c = x.firstElementChild; if (c.tagName != 'IMG') { w = c; c = c.firstElementChild; } if (c.parentNode.classList.contains('deferred')) { c.parentNode.classList.remove('deferred'); src = c.getAttribute('data-src'); c.removeAttribute('data-src'); } else src = c.getAttribute('src'); c.style['backgroundImage'] = 'url(\'' + src + '\')'; c.style['backgroundSize'] = 'cover'; c.style['backgroundPosition'] = x.dataset.position; c.style['backgroundRepeat'] = 'no-repeat'; c.src = 'data:image/svg+xml;charset=utf8,' + escape('<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"></svg>'); if (x.classList.contains('full') && (x.parentNode && x.parentNode.classList.contains('full')) && (x.parentNode.parentNode && x.parentNode.parentNode.parentNode && x.parentNode.parentNode.parentNode.classList.contains('container')) && x.parentNode.children.length == 1) { (function (x, w) { var p = x.parentNode.parentNode, f = function () { x.style['height'] = '0px'; clearTimeout(t); t = setTimeout(function () { if (getComputedStyle(p).flexDirection == 'row') { if (w) w.style['height'] = '100%'; x.style['height'] = (p.scrollHeight + 1) + 'px'; } else { if (w) w.style['height'] = 'auto'; x.style['height'] = 'auto'; } }, 125); }, t; on('resize', f); on('load', f); (f)(); })(x, w); } } })(); (function () { var xx = $$('.gallery img'), x, p, i, src; for (i = 0; i < xx.length; i++) { x = xx[i]; p = x.parentNode; if (p.classList.contains('deferred')) { p.classList.remove('deferred'); src = x.getAttribute('data-src'); } else src = x.getAttribute('src'); p.style['backgroundImage'] = 'url(\'' + src + '\')'; p.style['backgroundSize'] = 'cover'; p.style['backgroundPosition'] = 'center'; p.style['backgroundRepeat'] = 'no-repeat'; x.style['opacity'] = '0'; } })(); } })();
+    </script>
 </body>
 
 </html>
