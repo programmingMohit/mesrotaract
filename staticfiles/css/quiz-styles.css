@@ -1,0 +1,13 @@
+.accordion-body {
+    text-align: left;
+    background: transparent;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.accordion-item.acc-trans {
+    background: transparent;
+}

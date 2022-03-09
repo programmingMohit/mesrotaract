@@ -5,3 +5,6 @@ class HomePageView(TemplateView):
 
 class BoardOfDirectorsPageView(TemplateView):
 	template_name = 'bod.html'
+
+class QuizPageView(TemplateView):
+	template_name = 'quiz.html'

@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--questions-->
+<form name="quiz" id="question-form">
+    <div class="questions">
+        <!--Set 1-->
+        <div class="set-1">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <!--Question 1-->
+                <div class="accordion-item m-2 acc-trans" id="acc-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Question #1
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                            <!--Options-->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question1" id="flexRadioDefault1"
+                                    value="option-1" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question1" id="flexRadioDefault1"
+                                    value="option-2" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question1" id="flexRadioDefault1"
+                                    value="option-3" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Question 2-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Question #2
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo">
+                        <div class="accordion-body">
+                            <div class="accordion-body">
+                                <!--Options-->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question2" id="flexRadioDefault1"
+                                        value="option-1" />
+                                    <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question2" id="flexRadioDefault1"
+                                        value="option-2" />
+                                    <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question2" id="flexRadioDefault1"
+                                        value="option-3" />
+                                    <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Question 3-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Question #3
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question3" id="flexRadioDefault1"
+                                    value="option-1" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question3" id="flexRadioDefault1"
+                                    value="option-2" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question3" id="flexRadioDefault1"
+                                    value="option-3" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Question 4-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Question #4
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question4" id="flexRadioDefault1"
+                                    value="option-1" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question4" id="flexRadioDefault1"
+                                    value="option-2" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question4" id="flexRadioDefault1"
+                                    value="option-3" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Question 5-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Question #5
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question5" id="flexRadioDefault1"
+                                    value="option-1" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question5" id="flexRadioDefault1"
+                                    value="option-2" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question5" id="flexRadioDefault1"
+                                    value="option-3" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Set 2-->
+        <div class="set-2">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <!--Question 6-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Question #6
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                            <!--Options-->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question6" id="flexRadioDefault1"
+                                    value="option-1" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question6" id="flexRadioDefault1"
+                                    value="option-2" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question6" id="flexRadioDefault1"
+                                    value="option-3" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Question 7-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Question #7
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo">
+                        <div class="accordion-body">
+                            <div class="accordion-body">
+                                <!--Options-->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question7" id="flexRadioDefault1"
+                                        value="option-1" />
+                                    <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question7" id="flexRadioDefault1"
+                                        value="option-2" />
+                                    <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="question7" id="flexRadioDefault1"
+                                        value="option-3" />
+                                    <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Question 8-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Question #8
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question8" id="flexRadioDefault1"
+                                    value="option-1" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question8" id="flexRadioDefault1"
+                                    value="option-2" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question8" id="flexRadioDefault1"
+                                    value="option-3" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Question 9-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Question #9
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question9" id="flexRadioDefault1"
+                                    value="option-1" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question9" id="flexRadioDefault1"
+                                    value="option-2" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question9" id="flexRadioDefault1"
+                                    value="option-3" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Question 10-->
+                <div class="accordion-item m-2 acc-trans">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Question #10
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question10" id="flexRadioDefault1"
+                                    value="option-1" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question10" id="flexRadioDefault1"
+                                    value="option-2" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="question10" id="flexRadioDefault1"
+                                    value="option-3" />
+                                <label class="form-check-label" for="flexRadioDefault1"> Option 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!--end of questions-->
+<!--Page buttons-->
+<span class="page-1">
+    <button type="button" class="btn btn-light page-1-btn" data-mdb-ripple-color="dark">1</button>
+</span>
+<span class="page-2">
+    <button type="button" class="btn btn-light page-2-btn" data-mdb-ripple-color="dark">2</button>
+</span>
+<!--end of page buttons-->
+<!--submit button-->
+<div id="submit-btn">
+    <button type="button" class="btn btn-outline-light btn-rounded m-2 btn-lg" data-mdb-ripple-color="dark"
+        id="submit-btn">Submit</button>
+</div>>
+{% endblock content %}
