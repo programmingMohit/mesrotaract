@@ -12,7 +12,7 @@
     background: transparent;
 }
 
-#home-head, #heading3 {
+#home-head, h2, h3 {
     font-family: 'Sansita Swashed', cursive;
     word-spacing: 0.15em;}
 

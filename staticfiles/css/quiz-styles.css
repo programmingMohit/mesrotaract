@@ -11,3 +11,12 @@
 .accordion-item.acc-trans {
     background: transparent;
 }
+
+#home-head, #heading3 {
+    font-family: 'Sansita Swashed', cursive;
+    word-spacing: 0.15em;}
+
+#body-para {
+    font-family: 'Hubballi', cursive;
+    color: white;
+}

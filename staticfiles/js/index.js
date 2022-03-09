@@ -1,5 +1,5 @@
 //calls the check function on clicking the submit button
-const submitBtn = document.getElementById("submit-btn");
+const submitBtn = document.querySelector(".submit-btn");
 
 submitBtn.addEventListener("click", () => {
     check();
@@ -36,23 +36,53 @@ function check() {
     document.write(count);
 }
 
-const pg1Btn = document.querySelector(".page-1-btn");
-const pg2Btn = document.querySelector(".page-2-btn");
+//Section to traverse through the questions
+
+const prevBtn = document.querySelector(".prevBtn");
+const nextBtn = document.querySelector(".nextBtn");
 const divSet1 = document.querySelector(".set-1");
 const divSet2 = document.querySelector(".set-2");
+let pageCount = 0;
+let cardSets = [divSet1, divSet2];
+
+function showSection(pageCount) {
+    cardSets[pageCount].classList.remove("hide");
+}
 
 window.addEventListener("DOMContentLoaded", function () {
     divSet2.classList.add("hide");
+    submitBtn.classList.add("hide");
+    pageCount = 0;
 })
 
-pg1Btn.addEventListener("click", function () {
-    divSet2.classList.add("hide");
-    divSet1.classList.remove("hide");
+prevBtn.addEventListener("click", function () {
+
+    if (pageCount >= 1) {
+        pageCount--;
+        console.log(pageCount);
+        cardSets[pageCount + 1].classList.add("hide");
+        showSection(pageCount);
+    }
+
+    //hides submit button
+    if (pageCount < cardSets.length - 1) {
+        submitBtn.classList.add("hide");
+    }
 })
 
-pg2Btn.addEventListener("click", function () {
-    divSet2.classList.remove("hide");
-    divSet1.classList.add("hide");
+nextBtn.addEventListener("click", function () {
+
+    if (pageCount < cardSets.length - 1) {
+        pageCount++;
+        console.log(pageCount);
+        cardSets[pageCount - 1].classList.add("hide");
+        showSection(pageCount);
+    }
+
+    //shows submit button at last page
+    if (pageCount == cardSets.length - 1) {
+        submitBtn.classList.remove("hide");
+    }
 })
 
 

@@ -8,3 +8,6 @@ class BoardOfDirectorsPageView(TemplateView):
 
 class QuizPageView(TemplateView):
 	template_name = 'quiz.html'
+
+class QuizHomePageView(TemplateView):
+	template_name = 'quiz-home.html'

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--Main section-->
+<main>
+    <!--header-->
+    <div class="header" style="color: white">
+        <h2 class="display-2" id="home-head">
+            Celebrating world Rotaract Week 2022
+        </h2>
+        <p class="subheading fs-4">(7th march to 14th march)</p>
+        <h3 class="display-3" id="heading3">Lets Get Quizzical</h3>
+    </div>
+    <!--Body-->
+    <!--Top para--
+    <section class="home-body fs-3 mt-5">
+        <p id="body-para">[Sample text]Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            officia
+            doloremque dolor
+            pariatur nemo eius alias incidunt unde quos corrupti error laborum rem ex odit ab,
+            perspiciatis natus! Ab, eius!
+            Iste et sequi pariatur delectus doloribus assumenda molestias sint, repellat minima saepe
+            sit quasi tempore, distinctio eligendi suscipit facilis tempora consectetur? Totam modi
+            alias velit deleniti exercitationem. Hic, debitis delectus.</p>
+    </section>
+    --End of top para-->
+
+    <!--Form-->
+    <form action="{% url 'quiz' %}">
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="formName" class="form-control" required />
+            <label class="form-label text-white" for="formName">Name</label>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="formEmail" class="form-control" required />
+            <label class="form-label text-white" for="formEmail">Email address</label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Start Quiz!</button>
+    </form>
+    <!--End of form-->
+
+    <!--Note-->
+    <p class="note note-warning">
+        <strong>Important Note :</strong> Once you finish the quiz there will be a option to download
+        the certificate.
+        Kindly make sure you downloand it as the team won't be able help you once the quiz is submited
+    </p>
+    <!--End of note-->
+
+</main>
+<!--End of main section-->
+{% endblock content %}
