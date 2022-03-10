@@ -1,6 +1,6 @@
 //calls the check function on clicking the submit button
 const submitBtn = document.querySelector(".submit-btn");
-
+var count=0
 submitBtn.addEventListener("click", () => {
     check();
     //Manually going to the certificate page. Add dynamic functionlity if needed. check() has the count which can be used in an if else statement
@@ -10,7 +10,6 @@ submitBtn.addEventListener("click", () => {
 
 //result function
 function check() {
-    let count = 0;
     let q1 = document.quiz.question1.value;
     let q2 = document.quiz.question2.value;
     let q3 = document.quiz.question3.value;
@@ -60,7 +59,12 @@ function check() {
     // }
     // document.write(count);
     console.log(count);
+    document.getElementById("submit-btn").value=count
+    
 }
+
+//document.getElementById("certificate").href="{% url 'cert' res=".concat(String(count),"%}")    
+
 
 //Section to traverse through the questions
 
