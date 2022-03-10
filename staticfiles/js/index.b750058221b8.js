@@ -4,7 +4,7 @@ const submitBtn = document.querySelector(".submit-btn");
 submitBtn.addEventListener("click", () => {
     check();
     //Manually going to the certificate page. Add dynamic functionlity if needed. check() has the count which can be used in an if else statement
-    // window.location = "https://mesrotaract.herokuapp.com/"
+    window.location = "https://mesrotaract.herokuapp.com/"
 })
 
 
@@ -59,7 +59,6 @@ function check() {
     //     count++;
     // }
     // document.write(count);
-    console.log(count);
 }
 
 //Section to traverse through the questions

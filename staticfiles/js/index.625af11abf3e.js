@@ -59,7 +59,6 @@ function check() {
     //     count++;
     // }
     // document.write(count);
-    console.log(count);
 }
 
 //Section to traverse through the questions

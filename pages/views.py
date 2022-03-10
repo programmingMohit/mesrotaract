@@ -11,3 +11,6 @@ class QuizPageView(TemplateView):
 
 class QuizHomePageView(TemplateView):
 	template_name = 'quiz-home.html'
+
+class CertificatePageView(TemplateView):
+	template_name = 'certificate.html'

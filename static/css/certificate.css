@@ -1,0 +1,21 @@
+#home-head, h2, h3, .thank-note {
+    font-family: 'Sansita Swashed', cursive;
+    word-spacing: 0.15em;}
+
+#body-para {
+    font-family: 'Hubballi', cursive;
+    color: white;
+}
+
+.thank-note, .certificate-info, #certificate {
+    font-family: 'Syne Mono', monospace;
+    color: white;
+}
+
+#certificate {
+    border-radius: 2rem;
+    border: solid 3px white;
+    border-color: white;
+    padding: 0.5em;
+    
+}
