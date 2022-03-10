@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 whitenoise = "*"
 gunicorn = "*"
+Pillow = "*"
 
 [dev-packages]
 
