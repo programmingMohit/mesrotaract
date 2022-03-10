@@ -2,7 +2,7 @@
 
 {% block content %}
 <!--questions-->
-<form name="quiz" id="question-form">
+<form name="quiz" action="{% url 'certificate' %}" id="question-form" method="post">{% csrf_token %}
     <div class="questions">
         <!--Set 1-->
         <div class="set-1">
@@ -867,6 +867,11 @@
             </div>
         </div>
     </div>
+    <div class="submit-btn">
+        <button type="submit" class="btn btn-outline-light btn-rounded m-2 btn-lg" id="submit-btn" name="res" value="">Submit</button>
+        <!-- <a class="btn btn-outline-light btn-rounded m-2 btn-lg" href="{% url 'certificate'%}" role="button"
+            id="submit-btn">Submit</a> -->
+    </div>
 </form>
 <!--end of questions-->
 <!--Page buttons-->
@@ -879,8 +884,5 @@
 </span>
 <!--end of page buttons-->
 <!--submit button-->
-<div class="submit-btn">
-    <a class="btn btn-outline-light btn-rounded m-2 btn-lg" href="{% url 'certificate'%}" role="button"
-        id="submit-btn">Submit</a>
-</div>
+
 {% endblock content %}
